@@ -1,0 +1,59 @@
+<%- include('partials/_header') %>
+
+    <div class="container">
+        <div class="text-center">
+            <h1>Bienvenido a la AdminPage</h1>
+            <h4 class="text-secondary">Seleccione la operacion que desea realizar</h4>
+        </div>
+        <!-- FORM -->
+        <div class="col-md-12 mt-4">
+            <h2 class="text-info">Agregar un nuevo producto</h2>
+            <div class="card">
+                <div class="card-body">
+                    <form action="/add" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="title" placeholder="Nombre del Producto" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="price" placeholder="Precio del Producto" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="description" cols="80" class="form-control"> </textarea>
+                        </div>
+                        <button type="submit" class="btn btn-info btn-block">Agregar a la tienda</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- LIST -->
+        <div class="col-md-12  mt-4 mb-4">
+            <h2 class="text-info">Ver Productos actuales</h2>
+            <table class="table table-hover">
+                <thead class="table-dark bg-info">
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Descripcion</th>
+                    <th>Precio</th>
+                    <th>Operation</th>
+                </thead>
+                <tbody class="table-bordered">
+                    <%for(var i = 0; i< products.length; i++) {%>
+                        <tr>
+                            <td><%= i + 1 %></td>
+                            <td><%= products[i].title %></td>
+                            <td><%= products[i].description %></td>
+                            <td><%= products[i].price %></td>
+                            <td>
+                            <a href="/turn/<%= products[i]._id %>" class="btn <%= products[i].status ? 'btn-success': 'btn-dark' %>">Disponible</a>
+                                <a href="/delete/<%= products[i]._id %>" class="btn btn-danger">Eliminar</a>
+                                <a href="/edit/<%= products[i]._id %>" class="btn btn-secondary">Editar</a>
+                            </td>
+                        </tr>
+                    <%}%>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+<%- include('partials/_footer') %>

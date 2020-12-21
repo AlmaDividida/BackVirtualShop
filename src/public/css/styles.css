@@ -1,0 +1,243 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    background: whitesmoke;
+    background-image: url(https://cdn.wallpapersafari.com/76/55/clX7HC.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    font-size: 1.6rem;
+    line-height: 2;
+    color: #4B4453;
+}
+
+/* GLOBALES */
+img {
+    max-width: 100%;
+    padding: 0 10%;
+}
+
+@media (min-width: 768px) {
+    img {
+        width: 100%;
+    }
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.8rem;
+}
+
+h4 {
+    font-size: 2.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #FF6F91;
+}
+
+/* UTILIDADES */
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.section {
+    margin-top: 8rem;
+}
+
+.pink-color{
+    color: #FF6F91;
+}
+
+/* Buttons */
+.btn {
+    color: white;
+    line-height: 1;
+    padding: 1.5rem 3rem;
+    border-radius: 50vh;
+    margin-right: 1rem;
+    text-align: center;
+}
+
+.btn-primary {
+    background: #FF6F91;
+}
+
+.btn-primary:hover {
+    background: #D65DB1;
+    transition: 1s;
+}
+
+.btn-secundary {
+    background: white;
+    border: 2px solid #D65DB1;
+    color: #D65DB1;
+}
+
+.btn-secundary:hover {
+    border: 2px solid #845EC2;
+    background: #d65db26c;
+    color: white;
+    transition: 1s;
+}
+
+/* SITE HEADER */
+.site-header{
+    height: 75vh;
+    background-image: url(../img/headerBg.png); 
+    background-repeat: no-repeat;   
+    background-position: center center;
+    background-size: cover;
+    color: white;
+}
+
+.site-header h2{
+    font-size: 6rem;
+    line-height: 1.2;
+    color: white;
+}
+
+.bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
+
+.bar a{
+    margin-right: 2rem;
+    color: white;
+}
+
+.bar a:hover {
+    color: #FF6F91;
+    transition: .5s;
+}
+.bar a:last-of-type{
+    margin-right: 0;
+}
+
+.navbar{
+    display: flex;
+}
+
+.cart{
+    padding-left: 6rem;
+}
+
+.banner{
+    padding-top: 4rem;
+    max-width: 50rem;
+    line-height: 1.5;
+}
+/*  MAIN INFO   */
+.main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8rem;
+}
+
+/*  SOBRE NOSOTROS  */
+.features {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.feature{
+    flex-basis: calc(33.3% - 4rem);
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+.feature i{
+    color:#FF6F91;
+    font-size: 4rem;
+    margin: 2rem;
+}
+
+/*  PRODUCTOS   */
+.products{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.product{
+    flex-basis: calc(33.3% - 4rem);
+    border-radius: 3rem;
+    background-color: white;
+    padding: 2rem 4rem;
+    margin-bottom: 4rem;
+}
+.product header, .product footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product input{
+    width: 4rem;
+    font-size: 2rem;
+    border: none;
+    color: #FF6F91;
+}
+.product h4 {
+    margin: 0;
+}
+
+/*  GIFT SECTION   */
+
+.giftSection {
+    height:100vh;
+    background-image: url(../img/bannerBg.png); 
+    background-repeat: no-repeat;   
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.gift-text {
+    max-width: 75rem;
+}
+
+/*  FOOTER   */
+
+.site-footer {
+    height:60vh;
+    background-image: url(../img/footerBg.png); 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+}
